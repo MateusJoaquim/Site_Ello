@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff5f3 0%, #ffdcd4 50%, #ffc1b8 100%);
+    min-height: 100vh;
+    color: #4a3a38;
+}
+
+header {
+    background: linear-gradient(135deg, #fa8072 0%, #e66767 100%);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(250, 128, 114, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0%, 100% { transform: translateX(-30%); }
+    50% { transform: translateX(30%); }
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.gallery {
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(250, 128, 114, 0.25);
+}
+
+.gallery-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slide 9s infinite ease-in-out;
+}
+
+@keyframes slide {
+    0%, 33% { transform: translateX(0); }
+    34%, 66% { transform: translateX(-100%); }
+    67%, 100% { transform: translateX(-200%); }
+}
+
+.gallery-item {
+    min-width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(250, 128, 114, 0.4), transparent);
+}
+
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.gallery-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(250, 128, 114, 0.3);
+    animation: dotPulse 3s infinite;
+}
+
+.gallery-dots span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.gallery-dots span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes dotPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.photos-grid .photo-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(250, 128, 114, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.photos-grid .photo-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 40px rgba(250, 128, 114, 0.3);
+}
+
+.photos-grid .photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.photos-grid .photo-card .photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(250, 128, 114, 0.9), transparent);
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photos-grid .photo-card:hover .photo-overlay {
+    opacity: 1;
+}
+
+.welcome {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(250, 128, 114, 0.15);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #6b5a57;
+    text-align: center;
+}
+
+.welcome p {
+    position: relative;
+}
+
+.courses {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(250, 128, 114, 0.15);
+}
+
+.courses h2 {
+    color: #fa8072;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.courses h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #fa8072, #ffa07a);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.courses ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.courses li {
+    background: linear-gradient(135deg, #fff5f3 0%, #ffdcd4 100%);
+    padding: 1.5rem;
+    border-radius: 16px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.courses li::before {
+    content: '💃';
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.courses li:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(250, 128, 114, 0.25);
+    background: linear-gradient(135deg, #fff0ed 0%, #ffd7ce 100%);
+}
+
+footer {
+    text-align: center;
+    padding: 2.5rem;
+    color: #a0807a;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .gallery-item {
+        height: 250px;
+    }
+    
+    .photos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .welcome, .courses {
+        padding: 1.5rem;
+    }
+    
+    .courses h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .photos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
