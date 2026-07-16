@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Ello de Dança | Ballet, Jazz, Sapateado e Dança do Ventre</title>
     <meta name="description"
-        content="Studio Elllo de Dança - Aulas de Ballet, Jazz, Sapateado e Dança do Ventre em Porto Ferreira, SP.">
+        content="Studio Ello de Dança - Aulas de Ballet, Jazz, Sapateado e Dança do Ventre em Porto Ferreira, SP.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,6 +28,9 @@
                     animation: {
                         'fade-in': 'fadeIn 0.8s ease-out',
                         'slide-up': 'slideUp 0.8s ease-out',
+                        'shine': 'shine 3s ease-in-out infinite',
+                        'slide': 'slide 9s infinite ease-in-out',
+                        'dot-pulse': 'dotPulse 3s infinite',
                     },
                     keyframes: {
                         fadeIn: {
@@ -37,6 +40,19 @@
                         slideUp: {
                             '0%': { opacity: '0', transform: 'translateY(30px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        shine: {
+                            '0%, 100%': { transform: 'translateX(-30%)' },
+                            '50%': { transform: 'translateX(30%)' },
+                        },
+                        slide: {
+                            '0%, 33%': { transform: 'translateX(0)' },
+                            '34%, 66%': { transform: 'translateX(-100%)' },
+                            '67%, 100%': { transform: 'translateX(-200%)' },
+                        },
+                        dotPulse: {
+                            '0%, 100%': { opacity: '0.3' },
+                            '50%': { opacity: '1' },
                         }
                     }
                 }
@@ -46,7 +62,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <style type="text/tailwindcss">
         body {
@@ -58,8 +74,7 @@
             font-family: 'Playfair Display', serif;
         }
     </style>
-</head>
-
+    </head>
 <body class="bg-gradient-to-br from-salmon-extra via-salmon-light to-[#ffc1b8] min-h-screen text-studio-text">
     <!-- Header -->
     <header class="relative overflow-hidden bg-gradient-to-br from-salmon to-salmon-dark py-6 px-4 shadow-xl">
@@ -72,7 +87,7 @@
                 class="h-20 w-20 rounded-lg border-2 border-white object-cover shadow-xl mr-6 transition-transform duration-500 hover:scale-105">
             <div class="text-center">
                 <h1 class="text-3xl md:text-5xl font-display font-bold text-white tracking-tight drop-shadow-lg">Studio
-                    Elllo de Dança</h1>
+                    Ello de Dança</h1>
                 <p class="text-white/90 text-sm md:text-base font-light tracking-wide">Ello com a Dança</p>
             </div>
         </div>
@@ -84,7 +99,7 @@
             <div class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl">
                 <h2
                     class="text-3xl md:text-4xl font-display font-semibold text-salmon-dark text-center mb-8 relative after:content-[''] after:block after:w-20 after:h-1 after:bg-gradient-to-r after:from-salmon after:to-orange-300 after:mx-auto after:mt-4 after:rounded-full">
-                    Conheça o Studio Elllo
+                    Conheça o Studio Ello
                 </h2>
                 <p class="text-lg text-studio-muted max-w-4xl mx-auto leading-relaxed text-center mb-10">
                     O <strong>Studio Ello de Dança</strong> é uma das escolas de dança mais tradicionais de Porto
@@ -333,7 +348,7 @@
 
     <!-- Footer -->
     <footer class="text-center py-10 mt-12 text-studio-footer">
-        <p class="text-sm font-medium">Studio Elllo de Dança &copy; <span id="ano"></span></p>
+        <p class="text-sm font-medium">Studio Ello de Dança &copy; <span id="ano"></span></p>
         <p class="text-xs mt-2 opacity-70">Porto Ferreira - SP</p>
         <p class="text-xs mt-4 opacity-50">Desenvolvido por <span class="font-medium">Mateus Joaquim</span></p>
     </footer>
