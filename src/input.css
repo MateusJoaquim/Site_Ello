@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-gradient-to-br from-salmon-extra via-salmon-light to-[#ffc1b8] min-h-screen text-studio-text;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}

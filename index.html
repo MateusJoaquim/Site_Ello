@@ -5,62 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Ello de Dança | Ballet, Jazz, Sapateado e Dança do Ventre</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DanceSchool",
+      "name": "Studio Ello de Dança",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua 29 de Julho, 1598",
+        "addressLocality": "Porto Ferreira",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "telephone": "+5519996461654",
+      "url": "https://www.studioellodedanca.com.br"
+    }
+    </script>
     <meta name="description"
         content="Studio Ello de Dança - Aulas de Ballet, Jazz, Sapateado e Dança do Ventre em Porto Ferreira, SP.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        salmon: {
-                            DEFAULT: '#fa8072',
-                            dark: '#e66767',
-                            light: '#ffdcd4',
-                            extra: '#fff5f3',
-                        },
-                        studio: {
-                            text: '#4a3a38',
-                            muted: '#6b5a57',
-                            footer: '#a0807a'
-                        }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'shine': 'shine 3s ease-in-out infinite',
-                        'slide': 'slide 9s infinite ease-in-out',
-                        'dot-pulse': 'dotPulse 3s infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        shine: {
-                            '0%, 100%': { transform: 'translateX(-30%)' },
-                            '50%': { transform: 'translateX(30%)' },
-                        },
-                        slide: {
-                            '0%, 33%': { transform: 'translateX(0)' },
-                            '34%, 66%': { transform: 'translateX(-100%)' },
-                            '67%, 100%': { transform: 'translateX(-200%)' },
-                        },
-                        dotPulse: {
-                            '0%, 100%': { opacity: '0.3' },
-                            '50%': { opacity: '1' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="dist/output.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -253,8 +221,53 @@
             </div>
         </section>
 
+        <!-- Equipe -->
+        <section class="mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-display font-semibold text-salmon-dark text-center mb-12">Nossa Equipe</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card Gisele -->
+                <div class="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-lg border border-white/50 flex flex-col items-center text-center transition-all hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-32 h-32 bg-salmon-light rounded-full mb-6 flex-shrink-0 border-4 border-white shadow-md"></div>
+                    <h4 class="text-2xl font-display font-semibold text-studio-text">Gisele Pissinatti</h4>
+                    <p class="text-salmon-dark font-medium mt-1">Diretora e Professora</p>
+                    <p class="text-studio-muted text-sm mt-4 leading-relaxed">Experiência e paixão pela dança, guiando nossos alunos com dedicação e técnica.</p>
+                </div>
+                <!-- Card Juliana -->
+                <div class="bg-white/60 backdrop-blur-sm p-8 rounded-3xl shadow-lg border border-white/50 flex flex-col items-center text-center transition-all hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-32 h-32 bg-salmon-light rounded-full mb-6 flex-shrink-0 border-4 border-white shadow-md"></div>
+                    <h4 class="text-2xl font-display font-semibold text-studio-text">Juliana Mara Rosa</h4>
+                    <p class="text-salmon-dark font-medium mt-1">Diretora e Professora</p>
+                    <p class="text-studio-muted text-sm mt-4 leading-relaxed">Comprometida com a excelência artística e o desenvolvimento de cada aluno no Studio Ello.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos e FAQ -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16" data-aos="fade-up">
+            <!-- Depoimentos -->
+            <section class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-white/50">
+                <h2 class="text-2xl font-display font-semibold text-salmon-dark text-center mb-8">Depoimentos</h2>
+                <div class="space-y-6">
+                    <div class="bg-salmon-extra p-6 rounded-2xl italic text-studio-muted border-l-4 border-salmon">
+                        "O Studio Ello transformou a vida da minha filha. Profissionalismo e carinho impecáveis!"
+                        <p class="text-sm font-semibold mt-4 text-studio-text not-italic">- Mãe de aluna</p>
+                    </div>
+                </div>
+            </section>
+            <!-- FAQ -->
+            <section class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-white/50">
+                <h2 class="text-2xl font-display font-semibold text-salmon-dark text-center mb-8">Dúvidas Frequentes</h2>
+                <div class="space-y-4">
+                    <details class="bg-salmon-extra p-4 rounded-xl shadow-inner group">
+                        <summary class="font-semibold cursor-pointer text-studio-text group-open:text-salmon-dark">Qual a idade mínima para começar?</summary>
+                        <p class="mt-3 text-studio-muted leading-relaxed">Aceitamos alunos a partir de 3 anos de idade, com turmas adaptadas para cada fase do desenvolvimento.</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+
         <!-- Galeria de Fotos -->
-        <section class="mb-16">
+        <section class="mb-16" data-aos="fade-up">
             <h2 class="text-2xl md:text-3xl font-display font-semibold text-salmon-dark text-center mb-8">Galeria</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div
@@ -272,10 +285,11 @@
                     <img src="img/Sem título.jpg" alt="Dança do Ventre"
                         class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
+            </div>
         </section>
 
         <!-- Contato -->
-        <section class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl">
+        <section class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-white/50" data-aos="fade-up">
             <h2
                 class="text-2xl md:text-3xl font-display font-semibold text-salmon text-center mb-10 relative after:content-[''] after:block after:w-20 after:h-1 after:bg-gradient-to-r after:from-salmon after:to-orange-300 after:mx-auto after:mt-3 after:rounded-full">
                 Contato
@@ -298,50 +312,19 @@
                                 Ferreira - SP</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 006.33 1.724c6.055 0 11.891-4.24 11.891-9.854 0-2.39-.627-4.657-1.781-6.662" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-studio-text mb-1">WhatsApp / Telefone</h3>
-                            <a href="https://wa.me/5519996461654" target="_blank" rel="noopener noreferrer"
-                                class="text-studio-muted hover:text-green-500 transition-colors">(19) 99646-1654</a>
-                        </div>
-                    </div>
+                    <div class="w-full h-64 bg-gray-300 rounded-xl mb-6"></div> <!-- Placeholder Mapa -->
                 </div>
-                <!-- Redes Sociais -->
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-salmon/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-salmon" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.141c-3.98 0-7.209 3.229-7.209 7.209 0 3.98 3.229 7.209 7.209 7.209 3.98 0 7.209-3.229 7.209-7.209 0-3.98-3.229-7.209-7.209-7.209zm0 11.418c-2.347 0-4.251-1.904-4.251-4.251 0-2.347 1.904-4.251 4.251-4.251 2.347 0 4.251 1.904 4.251 4.251 0 2.348-1.904 4.251-4.251 4.251zm4.007-10.841c-.534 0-.967.432-.967.967 0 .534.433.967.967.967.535 0 .967-.433.967-.967 0-.535-.432-.967-.967-.967z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-studio-text mb-1">Instagram</h3>
-                            <a href="https://www.instagram.com/studioellodedanca" target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-studio-muted hover:text-salmon transition-colors">@studioellodedanca</a>
-                        </div>
+                
+                <!-- Formulário -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Seu nome" class="w-full p-4 rounded-xl border border-salmon-light focus:border-salmon focus:ring-1 focus:ring-salmon outline-none transition">
+                        <input type="email" name="email" placeholder="Seu e-mail" class="w-full p-4 rounded-xl border border-salmon-light focus:border-salmon focus:ring-1 focus:ring-salmon outline-none transition">
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-salmon/10 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-salmon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-studio-text mb-1">Website</h3>
-                            <a href="https://www.studioellodedanca.com.br" target="_blank" rel="noopener noreferrer"
-                                class="text-studio-muted hover:text-salmon transition-colors">www.studioellodedanca.com.br</a>
-                        </div>
-                    </div>
-                </div>
+                    <textarea name="message" placeholder="Como podemos ajudar?" class="w-full p-4 rounded-xl border border-salmon-light focus:border-salmon focus:ring-1 focus:ring-salmon outline-none transition h-40"></textarea>
+                    <button class="w-full bg-gradient-to-r from-salmon-dark to-salmon text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-salmon/30 hover:-translate-y-1 transition duration-300">Enviar Mensagem</button>
+                </form>
             </div>
         </section>
     </main>
@@ -354,7 +337,7 @@
     </footer>
 
     <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5519996461654" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/5519996461654" target="_blank" rel="noopener noreferrer" aria-label="Falar conosco via WhatsApp"
         class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 group">
         <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -368,6 +351,13 @@
 
     <script>
         document.getElementById('ano').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
     </script>
 </body>
 
